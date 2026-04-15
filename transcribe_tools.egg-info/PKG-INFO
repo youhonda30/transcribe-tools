@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: transcribe-tools
+Version: 1.0.0
+Summary: 音声・動画文字起こしCLIツール集（whisper / faster-whisper / Groq API）
+Requires-Python: >=3.10
+Requires-Dist: openai-whisper
+Requires-Dist: faster-whisper
+Requires-Dist: groq

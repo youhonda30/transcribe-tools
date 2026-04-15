@@ -1,0 +1,4 @@
+[console_scripts]
+transcribe-faster = transcribe_tools.faster:main
+transcribe-ffmpeg = transcribe_tools.ffmpeg:main
+transcribe-groq = transcribe_tools.groq_api:main

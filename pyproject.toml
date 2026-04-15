@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transcribe-tools"
+version = "1.0.0"
+description = "音声・動画文字起こしCLIツール集（whisper / faster-whisper / Groq API）"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-whisper",
+    "faster-whisper",
+    "groq",
+]
+
+[project.scripts]
+transcribe-ffmpeg  = "transcribe_tools.ffmpeg:main"
+transcribe-groq    = "transcribe_tools.groq_api:main"
+transcribe-faster  = "transcribe_tools.faster:main"
