@@ -23,11 +23,11 @@ fi
 # --- Python パッケージ（Pythonツール群 + 依存ライブラリ）---
 echo "[2/3] Python パッケージをインストール中..."
 pip install --upgrade pip
-pip install -e "$(dirname "$0")"
+pip install -e "$(dirname "$0")[notebooklm]"
 
 # --- 動作確認 ---
 echo "[3/3] 動作確認..."
-for cmd in transcribe-ffmpeg transcribe-groq transcribe-faster; do
+for cmd in transcribe-ffmpeg transcribe-groq transcribe-faster split_mp4 mp4_to_notebooklm upload_notebooklm; do
     if command -v "$cmd" &>/dev/null; then
         echo "  ✓ $cmd"
     else

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "transcribe-tools"
-version = "1.0.0"
-description = "音声・動画文字起こしCLIツール集（whisper / faster-whisper / Groq API）"
+version = "1.1.0"
+description = "音声・動画文字起こし＆NotebookLM連携CLIツール集"
 requires-python = ">=3.10"
 dependencies = [
     "openai-whisper",
@@ -13,7 +13,13 @@ dependencies = [
     "groq",
 ]
 
+[project.optional-dependencies]
+notebooklm = ["notebooklm-py[browser]"]
+
 [project.scripts]
-transcribe-ffmpeg  = "transcribe_tools.ffmpeg:main"
-transcribe-groq    = "transcribe_tools.groq_api:main"
-transcribe-faster  = "transcribe_tools.faster:main"
+transcribe-ffmpeg    = "transcribe_tools.ffmpeg:main"
+transcribe-groq      = "transcribe_tools.groq_api:main"
+transcribe-faster    = "transcribe_tools.faster:main"
+split_mp4            = "transcribe_tools.split_mp4:main"
+mp4_to_notebooklm   = "transcribe_tools.mp4_to_notebooklm:main"
+upload_notebooklm   = "transcribe_tools.upload_notebooklm:main"
